@@ -1,0 +1,560 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+                <style>
+                    .linenums {
+                        list-style-type: none;
+                    }
+
+                    .formatted-line-numbers {
+                        display: none;
+                    }
+                    .action-code-block {
+                        display: none;
+                    }
+                    table {
+                        border-collapse: collapse;
+                        width: 100%;
+                    }
+                    table, th, td {
+                        border: 1px solid black;
+                        padding: 8px;
+                        text-align: left;
+                    }
+                </style>
+            </head><body><h1><span class="header-link octicon octicon-link"></span>Cheat Sheet: API's and Data Collection</h1><table>
+<tbody><tr>
+<th>Package/Method</th>
+            <th>Description</th>
+            <th>Code Example</th>
+</tr>
+<tr>
+<td>Accessing element attribute</td>
+<td>Access the value of a specific attribute of an HTML element.</td>
+<td>Syntax:
+
+<pre class="prettyprint linenums prettyprinted" style=""><ol class="formatted-line-numbers"><li>1</li></ol><ol class="linenums"><li class="L0"><code><span class="pln">attribute </span><span class="pun">=</span><span class="pln"> element</span><span class="pun">[(</span><span class="pln">attribute</span><span class="pun">)]</span></code></li></ol>
+          <div class="code-block-actions">
+            <button title="Copy" class="action-code-block copy-code-block">
+              <i class="fa fa-copy" aria-hidden="true"></i>
+              <span class="popuptext" id="md-code-block-copy-0">Copied!</span>
+            </button>
+            
+            
+          </div>
+        </pre>
+<p>Example:</p>
+<pre class="prettyprint linenums prettyprinted" style=""><ol class="formatted-line-numbers"><li>1</li></ol><ol class="linenums"><li class="L0"><code><span class="pln">href </span><span class="pun">=</span><span class="pln"> link_element</span><span class="pun">[(</span><span class="pln">href</span><span class="pun">)]</span></code></li></ol>
+          <div class="code-block-actions">
+            <button title="Copy" class="action-code-block copy-code-block">
+              <i class="fa fa-copy" aria-hidden="true"></i>
+              <span class="popuptext" id="md-code-block-copy-1">Copied!</span>
+            </button>
+            
+            
+          </div>
+        </pre>
+</td>
+</tr>
+<tr>
+<td>BeautifulSoup()</td>
+<td>Parse the HTML content of a web page using BeautifulSoup. The parser type can vary based on the project.</td>
+<td>Syntax:
+
+<pre class="prettyprint linenums prettyprinted" style=""><ol class="formatted-line-numbers"><li>1</li></ol><ol class="linenums"><li class="L0"><code><span class="pln">soup </span><span class="pun">=</span><span class="pln"> </span><span class="typ">BeautifulSoup</span><span class="pun">(</span><span class="pln">html</span><span class="pun">,</span><span class="pln"> </span><span class="pun">(</span><span class="pln">html</span><span class="pun">.</span><span class="pln">parser</span><span class="pun">))</span></code></li></ol>
+          <div class="code-block-actions">
+            <button title="Copy" class="action-code-block copy-code-block">
+              <i class="fa fa-copy" aria-hidden="true"></i>
+              <span class="popuptext" id="md-code-block-copy-2">Copied!</span>
+            </button>
+            
+            
+          </div>
+        </pre>
+<p>Example:</p>
+<pre class="prettyprint linenums prettyprinted" style=""><ol class="formatted-line-numbers"><li>1</li></ol><ol class="linenums"><li class="L0"><code><span class="pln">html </span><span class="pun">=</span><span class="pln"> </span><span class="pun">(</span><span class="pln">https</span><span class="pun">:</span><span class="com">//api.example.com/data) soup = BeautifulSoup(html, (html.parser))</span></code></li></ol>
+          <div class="code-block-actions">
+            <button title="Copy" class="action-code-block copy-code-block">
+              <i class="fa fa-copy" aria-hidden="true"></i>
+              <span class="popuptext" id="md-code-block-copy-3">Copied!</span>
+            </button>
+            
+            
+          </div>
+        </pre>
+</td>
+</tr>
+<tr>
+<td>delete()</td>
+<td>Send a DELETE request to remove data or a resource from the server. DELETE requests delete a specified resource on the server.</td>
+<td>Syntax:
+
+<pre class="prettyprint linenums prettyprinted" style=""><ol class="formatted-line-numbers"><li>1</li></ol><ol class="linenums"><li class="L0"><code><span class="pln">response </span><span class="pun">=</span><span class="pln"> requests</span><span class="pun">.</span><span class="kwd">delete</span><span class="pun">(</span><span class="pln">url</span><span class="pun">)</span></code></li></ol>
+          <div class="code-block-actions">
+            <button title="Copy" class="action-code-block copy-code-block">
+              <i class="fa fa-copy" aria-hidden="true"></i>
+              <span class="popuptext" id="md-code-block-copy-4">Copied!</span>
+            </button>
+            
+            
+          </div>
+        </pre>
+<p>Example:</p>
+<pre class="prettyprint linenums prettyprinted" style=""><ol class="formatted-line-numbers"><li>1</li></ol><ol class="linenums"><li class="L0"><code><span class="pln">response </span><span class="pun">=</span><span class="pln"> requests</span><span class="pun">.</span><span class="kwd">delete</span><span class="pun">((</span><span class="pln">https</span><span class="pun">:</span><span class="com">//api.example.com/delete))</span></code></li></ol>
+          <div class="code-block-actions">
+            <button title="Copy" class="action-code-block copy-code-block">
+              <i class="fa fa-copy" aria-hidden="true"></i>
+              <span class="popuptext" id="md-code-block-copy-5">Copied!</span>
+            </button>
+            
+            
+          </div>
+        </pre>
+</td>
+</tr>
+<tr>
+<td>find()</td>
+<td>Find the first HTML element that matches the specified tag and attributes.</td>
+<td>Syntax:
+
+<pre class="prettyprint linenums prettyprinted" style=""><ol class="formatted-line-numbers"><li>1</li></ol><ol class="linenums"><li class="L0"><code><span class="pln">element </span><span class="pun">=</span><span class="pln"> soup</span><span class="pun">.</span><span class="pln">find</span><span class="pun">(</span><span class="pln">tag</span><span class="pun">,</span><span class="pln"> attrs</span><span class="pun">)</span></code></li></ol>
+          <div class="code-block-actions">
+            <button title="Copy" class="action-code-block copy-code-block">
+              <i class="fa fa-copy" aria-hidden="true"></i>
+              <span class="popuptext" id="md-code-block-copy-6">Copied!</span>
+            </button>
+            
+            
+          </div>
+        </pre>
+<p>Example:</p>
+<pre class="prettyprint linenums prettyprinted" style=""><ol class="formatted-line-numbers"><li>1</li></ol><ol class="linenums"><li class="L0"><code><span class="pln">first_link </span><span class="pun">=</span><span class="pln"> soup</span><span class="pun">.</span><span class="pln">find</span><span class="pun">((</span><span class="pln">a</span><span class="pun">),</span><span class="pln"> </span><span class="pun">{(</span><span class="kwd">class</span><span class="pun">):</span><span class="pln"> </span><span class="pun">(</span><span class="pln">link</span><span class="pun">)})</span></code></li></ol>
+          <div class="code-block-actions">
+            <button title="Copy" class="action-code-block copy-code-block">
+              <i class="fa fa-copy" aria-hidden="true"></i>
+              <span class="popuptext" id="md-code-block-copy-7">Copied!</span>
+            </button>
+            
+            
+          </div>
+        </pre>
+</td>
+</tr>
+<tr>
+<td>find_all()</td>
+<td>Find all HTML elements that match the specified tag and attributes.</td>
+<td>Syntax:
+
+<pre class="prettyprint linenums prettyprinted" style=""><ol class="formatted-line-numbers"><li>1</li></ol><ol class="linenums"><li class="L0"><code><span class="pln">elements </span><span class="pun">=</span><span class="pln"> soup</span><span class="pun">.</span><span class="pln">find_all</span><span class="pun">(</span><span class="pln">tag</span><span class="pun">,</span><span class="pln"> attrs</span><span class="pun">)</span></code></li></ol>
+          <div class="code-block-actions">
+            <button title="Copy" class="action-code-block copy-code-block">
+              <i class="fa fa-copy" aria-hidden="true"></i>
+              <span class="popuptext" id="md-code-block-copy-8">Copied!</span>
+            </button>
+            
+            
+          </div>
+        </pre>
+<p>Example:</p>
+<pre class="prettyprint linenums prettyprinted" style=""><ol class="formatted-line-numbers"><li>1</li></ol><ol class="linenums"><li class="L0"><code><span class="pln">all_links </span><span class="pun">=</span><span class="pln"> soup</span><span class="pun">.</span><span class="pln">find_all</span><span class="pun">((</span><span class="pln">a</span><span class="pun">),</span><span class="pln"> </span><span class="pun">{(</span><span class="kwd">class</span><span class="pun">):</span><span class="pln"> </span><span class="pun">(</span><span class="pln">link</span><span class="pun">)})&lt;/</span><span class="pln">td</span><span class="pun">&gt;</span></code></li></ol>
+          <div class="code-block-actions">
+            <button title="Copy" class="action-code-block copy-code-block">
+              <i class="fa fa-copy" aria-hidden="true"></i>
+              <span class="popuptext" id="md-code-block-copy-9">Copied!</span>
+            </button>
+            
+            
+          </div>
+        </pre>
+</td></tr>
+<tr>
+<td>findChildren()</td>
+<td>Find all child elements of an HTML element.</td>
+<td>Syntax:
+
+<pre class="prettyprint linenums prettyprinted" style=""><ol class="formatted-line-numbers"><li>1</li></ol><ol class="linenums"><li class="L0"><code><span class="pln">children </span><span class="pun">=</span><span class="pln"> element</span><span class="pun">.</span><span class="pln">findChildren</span><span class="pun">()</span></code></li></ol>
+          <div class="code-block-actions">
+            <button title="Copy" class="action-code-block copy-code-block">
+              <i class="fa fa-copy" aria-hidden="true"></i>
+              <span class="popuptext" id="md-code-block-copy-10">Copied!</span>
+            </button>
+            
+            
+          </div>
+        </pre>
+<p>Example:</p>
+<pre class="prettyprint linenums prettyprinted" style=""><ol class="formatted-line-numbers"><li>1</li></ol><ol class="linenums"><li class="L0"><code><span class="pln">child_elements </span><span class="pun">=</span><span class="pln"> parent_div</span><span class="pun">.</span><span class="pln">findChildren</span><span class="pun">()</span></code></li></ol>
+          <div class="code-block-actions">
+            <button title="Copy" class="action-code-block copy-code-block">
+              <i class="fa fa-copy" aria-hidden="true"></i>
+              <span class="popuptext" id="md-code-block-copy-11">Copied!</span>
+            </button>
+            
+            
+          </div>
+        </pre>
+</td>
+</tr>
+<tr>
+<td>get()</td>
+<td>Perform a GET request to retrieve data from a specified URL. GET 
+requests are typically used for reading data from an API. The response 
+variable will contain the server's response, which you can process 
+further.</td>
+<td>Syntax:
+
+<pre class="prettyprint linenums prettyprinted" style=""><ol class="formatted-line-numbers"><li>1</li></ol><ol class="linenums"><li class="L0"><code><span class="pln">response </span><span class="pun">=</span><span class="pln"> requests</span><span class="pun">.</span><span class="kwd">get</span><span class="pun">(</span><span class="pln">url</span><span class="pun">)</span></code></li></ol>
+          <div class="code-block-actions">
+            <button title="Copy" class="action-code-block copy-code-block">
+              <i class="fa fa-copy" aria-hidden="true"></i>
+              <span class="popuptext" id="md-code-block-copy-12">Copied!</span>
+            </button>
+            
+            
+          </div>
+        </pre>
+<p>Example:</p>
+<pre class="prettyprint linenums prettyprinted" style=""><ol class="formatted-line-numbers"><li>1</li></ol><ol class="linenums"><li class="L0"><code><span class="pln">response </span><span class="pun">=</span><span class="pln"> requests</span><span class="pun">.</span><span class="kwd">get</span><span class="pun">((</span><span class="pln">https</span><span class="pun">:</span><span class="com">//api.example.com/data))</span></code></li></ol>
+          <div class="code-block-actions">
+            <button title="Copy" class="action-code-block copy-code-block">
+              <i class="fa fa-copy" aria-hidden="true"></i>
+              <span class="popuptext" id="md-code-block-copy-13">Copied!</span>
+            </button>
+            
+            
+          </div>
+        </pre>
+</td>
+</tr>
+<tr>
+<td>Headers</td>
+<td>Include custom headers in the request. Headers can provide 
+additional information to the server, such as authentication tokens or 
+content types.</td>
+<td>Syntax:
+
+<pre class="prettyprint linenums prettyprinted" style=""><ol class="formatted-line-numbers"><li>1</li></ol><ol class="linenums"><li class="L0"><code><span class="pln">headers </span><span class="pun">=</span><span class="pln"> </span><span class="pun">{(</span><span class="typ">HeaderName</span><span class="pun">):</span><span class="pln"> </span><span class="pun">(</span><span class="typ">Value</span><span class="pun">)}</span></code></li></ol>
+          <div class="code-block-actions">
+            <button title="Copy" class="action-code-block copy-code-block">
+              <i class="fa fa-copy" aria-hidden="true"></i>
+              <span class="popuptext" id="md-code-block-copy-14">Copied!</span>
+            </button>
+            
+            
+          </div>
+        </pre>
+<p>Example:</p>
+<pre class="prettyprint linenums prettyprinted" style=""><ol class="formatted-line-numbers"><li>1</li></ol><ol class="linenums"><li class="L0"><code><span class="pln">base_url </span><span class="pun">=</span><span class="pln"> </span><span class="pun">(</span><span class="pln">https</span><span class="pun">:</span><span class="com">//api.example.com/data) headers = {(Authorization): (Bearer YOUR_TOKEN)} response = requests.get(base_url, headers=headers)</span></code></li></ol>
+          <div class="code-block-actions">
+            <button title="Copy" class="action-code-block copy-code-block">
+              <i class="fa fa-copy" aria-hidden="true"></i>
+              <span class="popuptext" id="md-code-block-copy-15">Copied!</span>
+            </button>
+            
+            
+          </div>
+        </pre>
+</td>
+</tr>
+<tr>
+<td>Import Libraries</td>
+<td>Import the necessary Python libraries for web scraping.</td>
+<td>Syntax:
+
+<pre class="prettyprint linenums prettyprinted" style=""><ol class="formatted-line-numbers"><li>1</li></ol><ol class="linenums"><li class="L0"><code><span class="kwd">from</span><span class="pln"> bs4 </span><span class="kwd">import</span><span class="pln"> </span><span class="typ">BeautifulSoup</span></code></li></ol>
+          <div class="code-block-actions">
+            <button title="Copy" class="action-code-block copy-code-block">
+              <i class="fa fa-copy" aria-hidden="true"></i>
+              <span class="popuptext" id="md-code-block-copy-16">Copied!</span>
+            </button>
+            
+            
+          </div>
+        </pre>
+</td>
+</tr>
+<tr>
+<td>json()</td>
+<td>Parse JSON data from the response. This extracts and works with the 
+data returned by the API. The response.json() method converts the JSON 
+response into a Python data structure (usually a dictionary or list).</td>
+<td>Syntax:
+
+
+<pre class="prettyprint linenums prettyprinted" style=""><ol class="formatted-line-numbers"><li>1</li></ol><ol class="linenums"><li class="L0"><code><span class="pln">data </span><span class="pun">=</span><span class="pln"> response</span><span class="pun">.</span><span class="pln">json</span><span class="pun">()</span></code></li></ol>
+          <div class="code-block-actions">
+            <button title="Copy" class="action-code-block copy-code-block">
+              <i class="fa fa-copy" aria-hidden="true"></i>
+              <span class="popuptext" id="md-code-block-copy-17">Copied!</span>
+            </button>
+            
+            
+          </div>
+        </pre>
+<p>Example:</p>
+<pre class="prettyprint linenums prettyprinted" style=""><ol class="formatted-line-numbers"><li>1</li><li>2</li></ol><ol class="linenums"><li class="L0"><code><span class="pln">response </span><span class="pun">=</span><span class="pln"> requests</span><span class="pun">.</span><span class="kwd">get</span><span class="pun">((</span><span class="pln">https</span><span class="pun">:</span><span class="com">//api.example.com/data)) </span></code></li><li class="L1"><code><span class="pln">data </span><span class="pun">=</span><span class="pln"> response</span><span class="pun">.</span><span class="pln">json</span><span class="pun">()</span></code></li></ol>
+          <div class="code-block-actions multiple-lines">
+            <button title="Copy" class="action-code-block copy-code-block multiple-lines">
+              <i class="fa fa-copy" aria-hidden="true"></i>
+              <span class="popuptext" id="md-code-block-copy-18">Copied!</span>
+            </button>
+            
+            
+          </div>
+        </pre>
+</td>
+</tr>
+<tr>
+<td>next_sibling()</td>
+<td>Find the next sibling element in the DOM.</td>
+<td>Syntax:
+
+<pre class="prettyprint linenums prettyprinted" style=""><ol class="formatted-line-numbers"><li>1</li></ol><ol class="linenums"><li class="L0"><code><span class="pln">sibling </span><span class="pun">=</span><span class="pln"> element</span><span class="pun">.</span><span class="pln">find_next_sibling</span><span class="pun">()</span></code></li></ol>
+          <div class="code-block-actions">
+            <button title="Copy" class="action-code-block copy-code-block">
+              <i class="fa fa-copy" aria-hidden="true"></i>
+              <span class="popuptext" id="md-code-block-copy-19">Copied!</span>
+            </button>
+            
+            
+          </div>
+        </pre>
+<p>Example:</p>
+<pre class="prettyprint linenums prettyprinted" style=""><ol class="formatted-line-numbers"><li>1</li></ol><ol class="linenums"><li class="L0"><code><span class="pln">next_sibling </span><span class="pun">=</span><span class="pln"> current_element</span><span class="pun">.</span><span class="pln">find_next_sibling</span><span class="pun">()</span></code></li></ol>
+          <div class="code-block-actions">
+            <button title="Copy" class="action-code-block copy-code-block">
+              <i class="fa fa-copy" aria-hidden="true"></i>
+              <span class="popuptext" id="md-code-block-copy-20">Copied!</span>
+            </button>
+            
+            
+          </div>
+        </pre>
+</td>
+</tr>
+<tr>
+<td>parent</td>
+<td>Access the parent element in the Document Object Model (DOM).</td>
+<td>Syntax:
+
+<pre class="prettyprint linenums prettyprinted" style=""><ol class="formatted-line-numbers"><li>1</li></ol><ol class="linenums"><li class="L0"><code><span class="pln">parent </span><span class="pun">=</span><span class="pln"> element</span><span class="pun">.</span><span class="pln">parent</span></code></li></ol>
+          <div class="code-block-actions">
+            <button title="Copy" class="action-code-block copy-code-block">
+              <i class="fa fa-copy" aria-hidden="true"></i>
+              <span class="popuptext" id="md-code-block-copy-21">Copied!</span>
+            </button>
+            
+            
+          </div>
+        </pre>
+<p>Example:</p>
+<pre class="prettyprint linenums prettyprinted" style=""><ol class="formatted-line-numbers"><li>1</li></ol><ol class="linenums"><li class="L0"><code><span class="pln">parent_div </span><span class="pun">=</span><span class="pln"> paragraph</span><span class="pun">.</span><span class="pln">parent</span></code></li></ol>
+          <div class="code-block-actions">
+            <button title="Copy" class="action-code-block copy-code-block">
+              <i class="fa fa-copy" aria-hidden="true"></i>
+              <span class="popuptext" id="md-code-block-copy-22">Copied!</span>
+            </button>
+            
+            
+          </div>
+        </pre>
+</td>
+</tr>
+<tr>
+<td>post()</td>
+<td>Send a POST request to a specified URL with data. Create or update 
+POST requests using resources on the server. The data parameter contains
+ the data to send to the server, often in JSON format.</td>
+<td>Syntax:
+
+
+<pre class="prettyprint linenums prettyprinted" style=""><ol class="formatted-line-numbers"><li>1</li></ol><ol class="linenums"><li class="L0"><code><span class="pln">response </span><span class="pun">=</span><span class="pln"> requests</span><span class="pun">.</span><span class="pln">post</span><span class="pun">(</span><span class="pln">url</span><span class="pun">,</span><span class="pln"> data</span><span class="pun">)</span></code></li></ol>
+          <div class="code-block-actions">
+            <button title="Copy" class="action-code-block copy-code-block">
+              <i class="fa fa-copy" aria-hidden="true"></i>
+              <span class="popuptext" id="md-code-block-copy-23">Copied!</span>
+            </button>
+            
+            
+          </div>
+        </pre>
+<p>Example:</p>
+<pre class="prettyprint linenums prettyprinted" style=""><ol class="formatted-line-numbers"><li>1</li></ol><ol class="linenums"><li class="L0"><code><span class="pln">response </span><span class="pun">=</span><span class="pln"> requests</span><span class="pun">.</span><span class="pln">post</span><span class="pun">((</span><span class="pln">https</span><span class="pun">:</span><span class="com">//api.example.com/submit), data={(key): (value)})</span></code></li></ol>
+          <div class="code-block-actions">
+            <button title="Copy" class="action-code-block copy-code-block">
+              <i class="fa fa-copy" aria-hidden="true"></i>
+              <span class="popuptext" id="md-code-block-copy-24">Copied!</span>
+            </button>
+            
+            
+          </div>
+        </pre>
+</td>
+</tr>
+<tr>
+<td>put()</td>
+<td>Send a PUT request to update data on the server. PUT requests are 
+used to update an existing resource on the server with the data provided
+ in the data parameter, typically in JSON format.</td>
+<td>Syntax:
+
+<pre class="prettyprint linenums prettyprinted" style=""><ol class="formatted-line-numbers"><li>1</li></ol><ol class="linenums"><li class="L0"><code><span class="pln">response </span><span class="pun">=</span><span class="pln"> requests</span><span class="pun">.</span><span class="pln">put</span><span class="pun">(</span><span class="pln">url</span><span class="pun">,</span><span class="pln"> data</span><span class="pun">)</span></code></li></ol>
+          <div class="code-block-actions">
+            <button title="Copy" class="action-code-block copy-code-block">
+              <i class="fa fa-copy" aria-hidden="true"></i>
+              <span class="popuptext" id="md-code-block-copy-25">Copied!</span>
+            </button>
+            
+            
+          </div>
+        </pre>
+<p>Example:</p>
+<pre class="prettyprint linenums prettyprinted" style=""><ol class="formatted-line-numbers"><li>1</li></ol><ol class="linenums"><li class="L0"><code><span class="pln">response </span><span class="pun">=</span><span class="pln"> requests</span><span class="pun">.</span><span class="pln">put</span><span class="pun">((</span><span class="pln">https</span><span class="pun">:</span><span class="com">//api.example.com/update), data={(key): (value)})</span></code></li></ol>
+          <div class="code-block-actions">
+            <button title="Copy" class="action-code-block copy-code-block">
+              <i class="fa fa-copy" aria-hidden="true"></i>
+              <span class="popuptext" id="md-code-block-copy-26">Copied!</span>
+            </button>
+            
+            
+          </div>
+        </pre>
+</td>
+</tr>
+<tr>
+<td>Query parameters</td>
+<td>Pass query parameters in the URL to filter or customize the request.
+ Query parameters specify conditions or limits for the requested data.</td>
+<td>Syntax:
+
+<pre class="prettyprint linenums prettyprinted" style=""><ol class="formatted-line-numbers"><li>1</li></ol><ol class="linenums"><li class="L0"><code><span class="kwd">params</span><span class="pln"> </span><span class="pun">=</span><span class="pln"> </span><span class="pun">{(</span><span class="pln">param_name</span><span class="pun">):</span><span class="pln"> </span><span class="pun">(</span><span class="pln">value</span><span class="pun">)}</span></code></li></ol>
+          <div class="code-block-actions">
+            <button title="Copy" class="action-code-block copy-code-block">
+              <i class="fa fa-copy" aria-hidden="true"></i>
+              <span class="popuptext" id="md-code-block-copy-27">Copied!</span>
+            </button>
+            
+            
+          </div>
+        </pre>
+<p>Example:</p>
+<pre class="prettyprint linenums prettyprinted" style=""><ol class="formatted-line-numbers"><li>1</li><li>2</li><li>3</li></ol><ol class="linenums"><li class="L0"><code><span class="pln">base_url </span><span class="pun">=</span><span class="pln"> </span><span class="str">"https://api.example.com/data"</span></code></li><li class="L1"><code><span class="kwd">params</span><span class="pln"> </span><span class="pun">=</span><span class="pln"> </span><span class="pun">{</span><span class="str">"page"</span><span class="pun">:</span><span class="pln"> </span><span class="lit">1</span><span class="pun">,</span><span class="pln"> </span><span class="str">"per_page"</span><span class="pun">:</span><span class="pln"> </span><span class="lit">10</span><span class="pun">}</span></code></li><li class="L2"><code><span class="pln">response </span><span class="pun">=</span><span class="pln"> requests</span><span class="pun">.</span><span class="kwd">get</span><span class="pun">(</span><span class="pln">base_url</span><span class="pun">,</span><span class="pln"> </span><span class="kwd">params</span><span class="pun">=</span><span class="kwd">params</span><span class="pun">)</span></code></li></ol>
+          <div class="code-block-actions multiple-lines">
+            <button title="Copy" class="action-code-block copy-code-block multiple-lines">
+              <i class="fa fa-copy" aria-hidden="true"></i>
+              <span class="popuptext" id="md-code-block-copy-28">Copied!</span>
+            </button>
+            
+            
+          </div>
+        </pre>
+</td>
+</tr>
+<tr>
+<td>select()</td>
+<td>Select HTML elements from the parsed HTML using a CSS selector.</td>
+<td>Syntax:
+
+<pre class="prettyprint linenums prettyprinted" style=""><ol class="formatted-line-numbers"><li>1</li></ol><ol class="linenums"><li class="L0"><code><span class="pln">element </span><span class="pun">=</span><span class="pln"> soup</span><span class="pun">.</span><span class="kwd">select</span><span class="pun">(</span><span class="pln">selector</span><span class="pun">)</span></code></li></ol>
+          <div class="code-block-actions">
+            <button title="Copy" class="action-code-block copy-code-block">
+              <i class="fa fa-copy" aria-hidden="true"></i>
+              <span class="popuptext" id="md-code-block-copy-29">Copied!</span>
+            </button>
+            
+            
+          </div>
+        </pre>
+<p>Example:</p>
+<pre class="prettyprint linenums prettyprinted" style=""><ol class="formatted-line-numbers"><li>1</li></ol><ol class="linenums"><li class="L0"><code><span class="pln">titles </span><span class="pun">=</span><span class="pln"> soup</span><span class="pun">.</span><span class="kwd">select</span><span class="pun">((</span><span class="pln">h1</span><span class="pun">))</span></code></li></ol>
+          <div class="code-block-actions">
+            <button title="Copy" class="action-code-block copy-code-block">
+              <i class="fa fa-copy" aria-hidden="true"></i>
+              <span class="popuptext" id="md-code-block-copy-30">Copied!</span>
+            </button>
+            
+            
+          </div>
+        </pre>
+</td>
+</tr>
+<tr>
+<td>status_code</td>
+<td>Check the HTTP status code of the response. The HTTP status code 
+indicates the result of the request (success, error, redirection). Use 
+the HTTP status codeIt can be used for error handling and 
+decision-making in your code.</td>
+<td>Syntax:
+
+<pre class="prettyprint linenums prettyprinted" style=""><ol class="formatted-line-numbers"><li>1</li></ol><ol class="linenums"><li class="L0"><code><span class="pln">response</span><span class="pun">.</span><span class="pln">status_code</span></code></li></ol>
+          <div class="code-block-actions">
+            <button title="Copy" class="action-code-block copy-code-block">
+              <i class="fa fa-copy" aria-hidden="true"></i>
+              <span class="popuptext" id="md-code-block-copy-31">Copied!</span>
+            </button>
+            
+            
+          </div>
+        </pre>
+<p>Example:</p>
+<pre class="prettyprint linenums prettyprinted" style=""><ol class="formatted-line-numbers"><li>1</li><li>2</li><li>3</li></ol><ol class="linenums"><li class="L0"><code><span class="pln">url </span><span class="pun">=</span><span class="pln"> </span><span class="str">"https://api.example.com/data"</span></code></li><li class="L1"><code><span class="pln">response </span><span class="pun">=</span><span class="pln"> requests</span><span class="pun">.</span><span class="kwd">get</span><span class="pun">(</span><span class="pln">url</span><span class="pun">)</span></code></li><li class="L2"><code><span class="pln">status_code </span><span class="pun">=</span><span class="pln"> response</span><span class="pun">.</span><span class="pln">status_code</span></code></li></ol>
+          <div class="code-block-actions multiple-lines">
+            <button title="Copy" class="action-code-block copy-code-block multiple-lines">
+              <i class="fa fa-copy" aria-hidden="true"></i>
+              <span class="popuptext" id="md-code-block-copy-32">Copied!</span>
+            </button>
+            
+            
+          </div>
+        </pre>
+</td>
+</tr>
+<tr>
+<td>tags for find() and find_all()</td>
+<td> Specify any valid HTML tag as the tag parameter to search for 
+elements of that type. Here are some common HTML tags that you can use 
+with the tag parameter.</td>
+<td>Tag Example:
+
+<pre class="prettyprint linenums prettyprinted" style=""><ol class="formatted-line-numbers"><li>1</li><li>2</li><li>3</li><li>4</li><li>5</li><li>6</li><li>7</li><li>8</li><li>9</li><li>10</li></ol><ol class="linenums"><li class="L0"><code><span class="pun">-</span><span class="pln"> </span><span class="pun">(</span><span class="pln">a</span><span class="pun">):</span><span class="pln"> </span><span class="typ">Find</span><span class="pln"> anchor </span><span class="pun">()</span><span class="pln"> tags</span><span class="pun">.</span></code></li><li class="L1"><code><span class="pun">-</span><span class="pln"> </span><span class="pun">(</span><span class="pln">p</span><span class="pun">):</span><span class="pln"> </span><span class="typ">Find</span><span class="pln"> paragraph </span><span class="pun">((</span><span class="pln">p</span><span class="pun">))</span><span class="pln"> tags</span><span class="pun">.</span></code></li><li class="L2"><code><span class="pun">-</span><span class="pln"> </span><span class="pun">(</span><span class="pln">h1</span><span class="pun">),</span><span class="pln"> </span><span class="pun">(</span><span class="pln">h2</span><span class="pun">),</span><span class="pln"> </span><span class="pun">(</span><span class="pln">h3</span><span class="pun">),</span><span class="pln"> </span><span class="pun">(</span><span class="pln">h4</span><span class="pun">),</span><span class="pln"> </span><span class="pun">(</span><span class="pln">h5</span><span class="pun">),</span><span class="pln"> </span><span class="pun">(</span><span class="pln">h6</span><span class="pun">):</span><span class="pln"> </span><span class="typ">Find</span><span class="pln"> heading tags </span><span class="kwd">from</span><span class="pln"> level </span><span class="lit">1</span><span class="pln"> to </span><span class="lit">6</span><span class="pln"> </span><span class="pun">(</span><span class="pln"> </span><span class="pun">(</span><span class="pln">h1</span><span class="pun">),</span><span class="pln">n </span><span class="pun">(</span><span class="pln">h2</span><span class="pun">)).</span></code></li><li class="L3"><code><span class="pun">-</span><span class="pln"> </span><span class="pun">(</span><span class="pln">table</span><span class="pun">):</span><span class="pln"> </span><span class="typ">Find</span><span class="pln"> table </span><span class="pun">()</span><span class="pln"> tags</span><span class="pun">.</span></code></li><li class="L4"><code><span class="pun">-</span><span class="pln"> </span><span class="pun">(</span><span class="pln">tr</span><span class="pun">):</span><span class="pln"> </span><span class="typ">Find</span><span class="pln"> table row </span><span class="pun">()</span><span class="pln"> tags</span><span class="pun">.</span></code></li><li class="L5"><code><span class="pun">-</span><span class="pln"> </span><span class="pun">(</span><span class="pln">td</span><span class="pun">):</span><span class="pln"> </span><span class="typ">Find</span><span class="pln"> table cell </span><span class="pun">((</span><span class="pln">td</span><span class="pun">))</span><span class="pln"> tags</span><span class="pun">.</span></code></li><li class="L6"><code><span class="pun">-</span><span class="pln"> </span><span class="pun">(</span><span class="pln">th</span><span class="pun">):</span><span class="pln"> </span><span class="typ">Find</span><span class="pln"> table header cell </span><span class="pun">((</span><span class="pln">td</span><span class="pun">))</span><span class="pln">tags</span><span class="pun">.</span></code></li><li class="L7"><code><span class="pun">-</span><span class="pln"> </span><span class="pun">(</span><span class="pln">img</span><span class="pun">):</span><span class="pln"> </span><span class="typ">Find</span><span class="pln"> image </span><span class="pun">((</span><span class="pln">img</span><span class="pun">))</span><span class="pln"> tags</span><span class="pun">.</span></code></li><li class="L8"><code><span class="pun">-</span><span class="pln"> </span><span class="pun">(</span><span class="pln">form</span><span class="pun">):</span><span class="pln"> </span><span class="typ">Find</span><span class="pln"> form </span><span class="pun">((</span><span class="pln">form</span><span class="pun">))</span><span class="pln"> tags</span><span class="pun">.</span></code></li><li class="L9"><code><span class="pun">-</span><span class="pln"> </span><span class="pun">(</span><span class="pln">button</span><span class="pun">):</span><span class="pln"> </span><span class="typ">Find</span><span class="pln"> button </span><span class="pun">((</span><span class="pln">button</span><span class="pun">))</span><span class="pln"> tags</span><span class="pun">.</span></code></li></ol>
+          <div class="code-block-actions multiple-lines">
+            <button title="Copy" class="action-code-block copy-code-block multiple-lines">
+              <i class="fa fa-copy" aria-hidden="true"></i>
+              <span class="popuptext" id="md-code-block-copy-33">Copied!</span>
+            </button>
+            
+            
+          </div>
+        </pre>
+</td>
+</tr>
+<tr>
+<td>text</td>
+<td>Retrieve the text content of an HTML element.</td>
+<td>Syntax:
+
+<pre class="prettyprint linenums prettyprinted" style=""><ol class="formatted-line-numbers"><li>1</li></ol><ol class="linenums"><li class="L0"><code><span class="pln">text </span><span class="pun">=</span><span class="pln"> element</span><span class="pun">.</span><span class="pln">text</span></code></li></ol>
+          <div class="code-block-actions">
+            <button title="Copy" class="action-code-block copy-code-block">
+              <i class="fa fa-copy" aria-hidden="true"></i>
+              <span class="popuptext" id="md-code-block-copy-34">Copied!</span>
+            </button>
+            
+            
+          </div>
+        </pre>
+<p>Example:</p>
+<pre class="prettyprint linenums prettyprinted" style=""><ol class="formatted-line-numbers"><li>1</li></ol><ol class="linenums"><li class="L0"><code><span class="pln">title_text </span><span class="pun">=</span><span class="pln"> title_element</span><span class="pun">.</span><span class="pln">text</span></code></li></ol>
+          <div class="code-block-actions">
+            <button title="Copy" class="action-code-block copy-code-block">
+              <i class="fa fa-copy" aria-hidden="true"></i>
+              <span class="popuptext" id="md-code-block-copy-35">Copied!</span>
+            </button>
+            
+            
+          </div>
+        </pre>
+</td>
+</tr>
+</tbody></table><footer>
+<img src="cheat%20sheet%20beautifulsoup_files/footer_6b.png" alt="">
+</footer><h3> © IBM Corporation. All rights reserved. </h3><h3></h3></body></html>
